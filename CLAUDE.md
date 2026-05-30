@@ -78,3 +78,20 @@ ProcessMind LLC is a single-member LLC owned solely by Phil Fenton. Any partner 
 - Deployed to GitHub Pages
 - Base path issue identified — may need '/processmind/' in vite.config.js
 - Contact: mailto info@mysterwolf.studio (placeholder until domain acquired)
+
+## Available Skills
+Skills live at github.com/MysterWolf/skills. Pull that repo and read README.md
+to see all available skills before starting work.
+
+Relevant skills for this repo:
+- spinup-site — reference for site architecture patterns
+- update-context — update this CLAUDE.md after session, commit and push
+- audit-repo — read-only snapshot of repo state
+
+## Updated Claude Code Session Starter
+"I'm working on the ProcessMind LLC consulting site at github.com/MysterWolf/processmind.
+First pull github.com/MysterWolf/skills and read README.md so you know what skills are available.
+Then pull this repo and read CLAUDE.md in full. If the site isn't rendering check vite.config.js
+base path — it should be '/processmind/'. CSS variables only in :root.
+Contact routes to info@mysterwolf.studio until domain is acquired.
+Confirm before making any changes."
