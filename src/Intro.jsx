@@ -29,7 +29,7 @@ const expect = [
   "We ask you to walk us through the problem — not from a slide, just out loud. The way you explain it tells us where the actual issue is.",
   "We run the seven steps. Some questions will feel like they're about the wrong thing. That's intentional.",
   "At the end, you get a written audit report — a structured breakdown of what's broken, what the fix looks like, and what becomes possible after.",
-  "If there's a build engagement that makes sense, we scope it. If there isn't, you still leave with the report. Either way, you're not paying for discovery that leads nowhere.",
+  "If there's a build engagement that makes sense, we scope it. If there isn't, you still leave with the report. Either way, you leave with something concrete — a structured breakdown of the problem and where the fix lives.",
 ];
 
 function useReveal(threshold = 0.08) {
@@ -265,7 +265,7 @@ export default function Intro() {
         <div className="nl" style={{ display: "flex", gap: 36, alignItems: "center" }}>
           <a href="/processmind/" className="nb">← Full site</a>
           <button className="bp" style={{ padding: "9px 22px", fontSize: 10 }} onClick={book}>
-            Book a free session
+            Book a session
           </button>
         </div>
       </nav>
@@ -314,7 +314,7 @@ export default function Intro() {
             ))}
           </div>
           <div style={{ opacity: 0, animation: "fU 0.8s ease 0.52s forwards", display: "flex", gap: 14, flexWrap: "wrap" }}>
-            <button className="bp" onClick={book}>Book a free first session</button>
+            <button className="bp" onClick={book}>Book a session</button>
           </div>
         </div>
       </section>
@@ -458,15 +458,15 @@ export default function Intro() {
               <div>
                 <div className="el">Get started</div>
                 <h2 style={{ fontFamily: "var(--pm-serif)", fontWeight: 300, fontSize: 40, color: "var(--pm-text)", letterSpacing: "-0.02em", lineHeight: 1.1, maxWidth: 520 }}>
-                  The first session<br />
-                  <em style={{ fontStyle: "italic", color: "var(--pm-gold)" }}>is free.</em>
+                  Let's talk about<br />
+                  <em style={{ fontStyle: "italic", color: "var(--pm-gold)" }}>what makes sense.</em>
                 </h2>
                 <p style={{ fontSize: 15, color: "var(--pm-muted)", maxWidth: 480, lineHeight: 1.8, fontWeight: 300, marginTop: 20 }}>
-                  No pitch. No proposal deck. Thirty minutes — we listen, ask the questions you haven't thought to ask, and tell you honestly whether we can help.
+                  No pitch. No proposal deck — just a straight conversation about what's broken and whether we can help.
                 </p>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: 12, alignItems: "flex-start" }}>
-                <button className="bp" onClick={book}>Book a free first session</button>
+                <button className="bp" onClick={book}>Book a session</button>
                 <a href="/processmind/" className="bg" style={{ textAlign: "center" }}>See the full site</a>
               </div>
             </div>

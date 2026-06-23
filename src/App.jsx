@@ -446,9 +446,6 @@ export default function App() {
                 {[
                   ["Approach", "Seven-step framework applied to every engagement"],
                   ["Deliverable", "Interactive audit report + actionable roadmap"],
-                  ["Discovery", "$3,000 – $5,000 flat"],
-                  ["Build engagement", "$10,000 – $25,000 scoped"],
-                  ["Ongoing retainer", "$500 – $1,500 / month"],
                   ["Industries", "Finance, healthcare, legal, operations, creative business"],
                 ].map(([l, v]) => (
                   <div key={l} style={{ background: "var(--pm-surface)", padding: "18px 24px", display: "flex", gap: 24, alignItems: "baseline" }}>
@@ -457,6 +454,9 @@ export default function App() {
                   </div>
                 ))}
               </div>
+              <p style={{ fontSize: 14, color: "var(--pm-muted)", lineHeight: 1.75, fontWeight: 300, marginTop: 24 }}>
+                Let's talk about what makes sense for your situation.
+              </p>
             </Reveal>
           </div>
         </div>
