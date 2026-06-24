@@ -52,7 +52,7 @@ To retheme: update only the :root block. Do not change values elsewhere.
 3. Animated stats — $200K+, 7 steps, 90%, 3x (count up on scroll)
 4. Seven Steps framework — hover turns name gold
 5. Use Cases — 4 cards, 2x2 grid
-6. About — fixer positioning, pricing grid
+6. About — fixer positioning, approach/deliverable/industries grid + soft CTA
 7. CTA — "Tell us what's broken. We'll handle the rest."
 8. Contact — discovery call form → mailto:info@mysterwolf.studio
 
@@ -62,7 +62,7 @@ To retheme: update only the :root block. Do not change values elsewhere.
 3. Seven Steps — same framework, same StepRow component pattern
 4. Case Study — generic telecom PM example, stat grid (338/203/1), pull quote
 5. What to Expect — 4-step numbered list of what happens in a session
-6. CTA — "The first session is free." → mailto:info@mysterwolf.studio
+6. CTA — "Let's talk about what makes sense." → mailto:info@mysterwolf.studio
 
 ## Architecture Decisions
 - Contact form uses mailto: info@mysterwolf.studio until ProcessMind domain acquired
@@ -96,6 +96,9 @@ ProcessMind LLC is a single-member LLC owned solely by Phil Fenton. Any partner 
 
 ## Changelog
 ### June 2026
+- Removed all explicit pricing from site (discovery fees, build costs, retainer amounts) — pricing is never on the site, it comes up in conversation
+- About section info grid now shows Approach, Deliverable, Industries only, with soft CTA below
+- Intro page CTA changed from "The first session is free" to "Let's talk about what makes sense"
 - Added react-router-dom (HashRouter) — site is now multi-page
 - Added src/Intro.jsx — cold intro one-pager at /#/intro for QR codes and forwarded links
 - Updated src/main.jsx to mount HashRouter with routes for App and Intro
