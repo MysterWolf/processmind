@@ -6,9 +6,9 @@
 The professional consulting website for ProcessMind LLC — a process consulting and AI-enabled solutions firm owned by Phil Fenton. Dark authoritative aesthetic matching the MWS circle badge mark. Tagline: "Every broken process has a solution. We find both." Built in React/Vite, deployed to GitHub Pages.
 
 ## Current Status
-- **Live:** mysterwolf.github.io/processmind/
-- **Intro page:** mysterwolf.github.io/processmind/#/intro
-- **Custom domain:** useprocessmind.com or similar (TBD — not yet registered)
+- **Live:** https://www.theprocessmind.com (HTTPS enforced)
+- **Intro page:** https://www.theprocessmind.com/#/intro
+- **Custom domain:** www.theprocessmind.com (CNAME in public/; apex redirects to www)
 - **Deployed from:** gh-pages branch
 
 ## Tech Stack
@@ -36,7 +36,8 @@ To retheme: update only the :root block. Do not change values elsewhere.
 | src/App.jsx | Main site component. Full consulting site (hero, steps, use cases, about, contact). |
 | src/Intro.jsx | Cold intro one-pager. Served at /#/intro. QR code / forwarded link target. |
 | src/main.jsx | Entry point. Mounts HashRouter with routes for App and Intro. |
-| vite.config.js | base: '/processmind/' for GitHub Pages subdirectory |
+| vite.config.js | base: '/' (custom domain configured) |
+| public/CNAME | Custom domain: www.theprocessmind.com |
 
 ## Routes
 | Path | Component | Purpose |
@@ -74,7 +75,8 @@ To retheme: update only the :root block. Do not change values elsewhere.
 - Each page component is self-contained: CSS variables, fonts, and all styles live in a `<style>` block inside the component — do not move shared styles to index.css
 
 ## Invariants — Never Change These
-- **vite.config.js base must match deployment path** — '/processmind/' for subdirectory, '/' for custom domain
+- **vite.config.js base must stay '/'** — custom domain is configured; do not revert to '/processmind/'
+- **public/CNAME must stay `www.theprocessmind.com`** — do not change to apex; use www for reliable GitHub Pages cert provisioning
 - **CSS variables live only in :root block** — never hardcode colors
 - **Contact routes to info@mysterwolf.studio until domain is set up**
 - **MWS mark (dark version) in nav and footer — never light version**
@@ -82,9 +84,7 @@ To retheme: update only the :root block. Do not change values elsewhere.
 - **New pages go in src/ as standalone components and get a Route in main.jsx** — do not nest pages inside App.jsx
 
 ## Pending Work
-1. Register domain — useprocessmind.com or similar
-2. Add CNAME when domain is ready, change vite.config.js base to '/', redeploy
-3. Update contact email when processmind domain email is set up
+1. Update contact email from info@mysterwolf.studio to a theprocessmind.com address when domain email is set up
 4. Add real case studies to main site as engagements complete
 5. Add testimonials section when client feedback is available
 
@@ -92,7 +92,7 @@ To retheme: update only the :root block. Do not change values elsewhere.
 ProcessMind LLC is a single-member LLC owned solely by Phil Fenton. Any partner involvement is project-based and contract-specific — not a standing partnership. This site represents Phil's consulting business, not a shared entity.
 
 ## Claude Code Session Starter
-"I'm working on the ProcessMind LLC consulting site at github.com/MysterWolf/processmind. Pull the repo and read CLAUDE.md. If the site isn't rendering, check vite.config.js base path — it should be '/processmind/'. CSS variables only in :root. Contact routes to info@mysterwolf.studio. Confirm before making any changes."
+"I'm working on the ProcessMind LLC consulting site at github.com/MysterWolf/processmind. Pull the repo and read CLAUDE.md. Site is live at www.theprocessmind.com (HTTPS enforced). vite.config.js base is '/'. CSS variables only in :root blocks inside each component. Contact routes to info@mysterwolf.studio. Confirm before making any changes."
 
 ## Changelog
 ### June 2026
@@ -122,8 +122,9 @@ Relevant skills for this repo:
 "I'm working on the ProcessMind LLC consulting site at github.com/MysterWolf/processmind.
 First pull github.com/MysterWolf/skills and read README.md so you know what skills are available.
 Then pull this repo and read CLAUDE.md in full.
+Site is live at www.theprocessmind.com (HTTPS enforced). vite.config.js base is '/'.
 Routing uses HashRouter — main site is /#/, intro page is /#/intro.
 CSS variables only in :root blocks inside each component. Do not move styles to index.css.
-Contact routes to info@mysterwolf.studio until domain is acquired.
+Contact routes to info@mysterwolf.studio until domain email is set up.
 New pages go in src/ as standalone components with a Route added in main.jsx.
 Confirm before making any changes."
